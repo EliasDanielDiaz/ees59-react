@@ -1,0 +1,42 @@
+.canciones {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.canciones h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* LISTA */
+.lista-canciones {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* CARD */
+.cancion-card {
+  background: var(--blanco);
+  padding: 25px;
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra-suave);
+  text-align: left;
+}
+
+.cancion-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.cancion-card p {
+  margin: 5px 0;
+  font-size: 1.05rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .cancion-card {
+    padding: 20px;
+  }
+}

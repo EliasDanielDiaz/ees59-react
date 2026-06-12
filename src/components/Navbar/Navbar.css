@@ -1,0 +1,196 @@
+/* ============================================
+    NAVBAR (HEADER TP1 ADAPTADO A REACT)
+============================================ */
+.navbar {
+  width: 100%;
+  padding: 25px;
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: sticky;
+  top: 0;
+  border-bottom: 5px solid var(--verde-claro);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Overlay */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(30, 58, 47, 0.78);
+  z-index: 1;
+}
+
+.nav-container {
+  display: flex;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 25px;
+}
+
+/* ============================================
+LOGO + TEXTO
+============================================ */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.nav-logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: var(--transicion);
+}
+
+.nav-logo img:hover {
+  transform: scale(1.05);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.nav-logo-text {
+  color: var(--blanco);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* ============================================
+MENÚ
+============================================ */
+.nav-links {
+  flex-wrap: wrap;
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--blanco);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: var(--transicion);
+  backdrop-filter: blur(5px);
+}
+
+.nav-links li a:hover {
+  background-color: var(--verde-claro);
+  border-color: var(--verde-claro);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+HAMBURGUESA
+============================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--blanco);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Animación */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ============================================
+    RESPONSIVE
+============================================ */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 230px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-logo img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav-logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nav-logo-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .nav-links li a {
+    font-size: 0.8rem;
+  }
+}

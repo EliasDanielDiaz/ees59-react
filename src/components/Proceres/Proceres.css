@@ -1,0 +1,99 @@
+.proceres {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.proceres h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.proceres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.procer-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.procer-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.procer-card h3 {
+  margin: 15px 0;
+}
+
+.procer-card button {
+  padding: 10px 15px;
+  background: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.procer-card button:hover {
+  background: #ffcc00;
+  color: #1e1e1e;
+}
+
+/* PANEL LATERAL */
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100%;
+  background: white;
+  padding: 30px;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.panel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.panel h3 {
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+
+.panel p {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* BOTÓN CERRAR */
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}

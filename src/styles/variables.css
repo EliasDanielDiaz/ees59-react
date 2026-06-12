@@ -1,0 +1,27 @@
+:root {
+  /* COLORES PRINCIPALES DEL TP1 */
+  --verde-oscuro: #1E3A2F;        /* Verde oscuro institucional */
+  --verde-medio: #2E6B4F;           /* Verde medio TP1 */
+  --verde-claro: #4A9B7B;          /* Verde claro (hover TP1) */
+  --blanco: #FFFFFF;      /* Blanco */
+  --gris-texto: #333;
+  --beige: #f5f0e6;
+
+  /* FONDOS Y NEUTROS */
+  --color-gris: #F2F2F2;            /* Fondo suave */
+  --color-gris-oscuro: #1A1A1A;     /* Negro suave */
+
+  /* SOMBRAS */
+  --sombra-suave: 0 0 10px rgba(0,0,0,0.1);
+  --sombra-media: 0 0 15px rgba(0,0,0,0.2);
+
+  /* TIPOGRAFÍA */
+  --fuente-base: "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* RADIOS */
+  --radio: 10px;
+  --radio-grande: 12px;
+
+  /* TRANSICIONES */
+  --transicion: 0.3s ease;
+}

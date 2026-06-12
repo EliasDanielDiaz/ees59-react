@@ -1,0 +1,70 @@
+.sobre {
+  width: 100%;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.sobre-nosotros {
+  padding: 60px 10%;
+  background: var(--color-gris);
+}
+
+.sobre-nosotros h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* LAYOUT */
+.sn-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* TEXTO */
+.sn-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sn-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* ICONOS */
+.sn-iconos {
+  flex: 0.6;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sn-item {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: var(--sombra-suave);
+}
+
+.sn-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sn-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sn-item {
+    font-size: 2.2rem;
+  }
+}

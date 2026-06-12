@@ -1,0 +1,17 @@
+.footer {
+  border-top: 3px solid var(--verde-claro);
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.footer strong {
+    color: var(--verde-claro);
+}
