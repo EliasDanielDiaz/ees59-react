@@ -1,11 +1,39 @@
 .cursos {
   padding: 60px 10%;
   text-align: center;
+  background-image: url("../../assets/cursosImagenes/quimica.jpg");
 }
 
 .cursos h2 {
   font-size: 2.2rem;
   margin-bottom: 40px;
+}
+
+.cursos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 60, 30, 0.30),
+    rgba(0, 80, 40, 0.30)
+  );
+  animation: overlayCursos 16s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes overlayCursos {
+  0% {
+    background: linear-gradient(
+      rgba(0, 60, 30, 0.30),
+      rgba(0, 80, 40, 0.30)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      rgba(0, 80, 40, 0.30),
+      rgba(0, 100, 50, 0.30)
+    );
+  }
 }
 
 /* GRID DE CURSOS */

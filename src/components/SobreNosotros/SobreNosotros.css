@@ -12,7 +12,13 @@
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
-  min-height: calc(100vh - 120px); /* ajustar según el alto del footer */
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Fade-in general */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Overlay verde animado */
@@ -49,12 +55,18 @@
 .sobreNosotros-hero {
   text-align: center;
   padding: 60px 10%;
-  background: rgba(0, 0, 0, 0.35); /* efecto vidrio */
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px) brightness(0.9);
   color: white;
   position: relative;
   z-index: 2;
   border-bottom: 1px solid rgba(255,255,255,0.15);
+  animation: heroFade 1.4s ease-out;
+}
+
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .sobreNosotros-hero h1 {
@@ -76,35 +88,40 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 35px;
-  padding: 8% 10%;
+  padding: 40px 10%;
 }
 
 .card-sobreNosotros {
-  background: rgba(255, 255, 255, 0.85); /* glass */
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: cardIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .card-sobreNosotros:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
 }
 
 .card-sobreNosotros h2 {
   font-size: 1.6rem;
   color: var(--verde-oscuro);
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .card-sobreNosotros p {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--color-gris-oscuro);
-  text-align: center;
 }
 
 /* ===========================
@@ -119,8 +136,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 12px rgba(0, 80, 40, 0.4); /* brillo verde */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 0 12px rgba(0, 80, 40, 0.4);
 }
 
 .icono-premium svg {
@@ -131,9 +148,10 @@
   fill: none;
 }
 
+/* Micro-rotación + brillo */
 .card-sobreNosotros:hover .icono-premium {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.05) rotate(2deg);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
 }
 
 /* ===========================
