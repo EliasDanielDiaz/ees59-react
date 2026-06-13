@@ -1,0 +1,146 @@
+@import "../../styles/variables.css";
+
+/* ===========================
+   CONTENEDOR GENERAL + FONDO
+=========================== */
+.sobreNosotros {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40px;
+  background-image: url("../../assets/sobreImagenes/fondo_adn.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  min-height: calc(100vh - 120px); /* ajustar según el alto del footer */
+}
+
+/* Overlay verde animado */
+.sobreNosotros::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 60, 30, 0.30),
+    rgba(0, 80, 40, 0.30)
+  );
+  animation: fondoVerde 16s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes fondoVerde {
+  0% {
+    background: linear-gradient(
+      rgba(0, 60, 30, 0.30),
+      rgba(0, 80, 40, 0.30)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      rgba(0, 80, 40, 0.30),
+      rgba(0, 100, 50, 0.30)
+    );
+  }
+}
+
+/* ===========================
+   HERO
+=========================== */
+.sobreNosotros-hero {
+  text-align: center;
+  padding: 60px 10%;
+  background: rgba(0, 0, 0, 0.35); /* efecto vidrio */
+  backdrop-filter: blur(6px);
+  color: white;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sobreNosotros-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.sobreNosotros-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+.sobreNosotros-cards {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  padding: 8% 10%;
+}
+
+.card-sobreNosotros {
+  background: rgba(255, 255, 255, 0.85); /* glass */
+  backdrop-filter: blur(4px);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-sobreNosotros:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.card-sobreNosotros h2 {
+  font-size: 1.6rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-sobreNosotros p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-gris-oscuro);
+  text-align: center;
+}
+
+/* ===========================
+   ÍCONOS PREMIUM
+=========================== */
+.icono-premium {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px auto;
+  background: var(--verde-oscuro);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 80, 40, 0.4); /* brillo verde */
+}
+
+.icono-premium svg {
+  width: 45px;
+  height: 45px;
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+}
+
+.card-sobreNosotros:hover .icono-premium {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+  .sobreNosotros-hero h1 {
+    font-size: 2.2rem;
+  }
+}

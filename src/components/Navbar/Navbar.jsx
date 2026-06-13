@@ -44,7 +44,7 @@ export default function Navbar() {
 
         <ul className="nav-links">
           <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/sobre">Sobre Nosotros</Link></li>
+          <li><Link to="/sobreNosotros">Sobre Nosotros</Link></li>
           <li><Link to="/cursos">Cursos</Link></li>
           <li><Link to="/canciones">Canciones</Link></li>
           <li><Link to="/proceres">Próceres</Link></li>
