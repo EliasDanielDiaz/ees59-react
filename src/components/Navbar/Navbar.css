@@ -13,7 +13,7 @@
   border-bottom: 5px solid var(--verde-claro);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   position: relative;
-  z-index: 1000;
+  z-index: 20;
 }
 
 /* Overlay */
