@@ -53,33 +53,39 @@ export default function Cursos() {
       <div className="cursos-contenido">
         <h2 className="turno-titulo">Cursos y Materias</h2>
 
-        {/* TURNO MAÑANA */}
-        <h3 className="turno-subtitulo">Turno Mañana</h3>
-        <section className="cursos-grid">
-          {cursosManana.map((curso, index) => (
-            <button
-              key={index}
-              className="curso-btn"
-              onClick={() => setCursoSeleccionado(curso)}
-            >
-              {curso}
-            </button>
-          ))}
-        </section>
+        <div className="turnos-container">
+          {/* TURNO MAÑANA */}
+          <div className="turno-col">
+            <h3 className="turno-subtitulo">Turno Mañana</h3>
+            <section className="cursos-grid manana">
+              {cursosManana.map((curso, index) => (
+                <button
+                  key={index}
+                  className="curso-btn"
+                  onClick={() => setCursoSeleccionado(curso)}
+                >
+                  {curso}
+                </button>
+              ))}
+            </section>
+          </div>
 
-        {/* TURNO TARDE */}
-        <h3 className="turno-subtitulo">Turno Tarde</h3>
-        <section className="cursos-grid">
-          {cursosTarde.map((curso, index) => (
-            <button
-              key={index}
-              className="curso-btn"
-              onClick={() => setCursoSeleccionado(curso)}
-            >
-              {curso}
-            </button>
-          ))}
-        </section>
+          {/* TURNO TARDE */}
+          <div className="turno-col">
+            <h3 className="turno-subtitulo">Turno Tarde</h3>
+            <section className="cursos-grid tarde">
+              {cursosTarde.map((curso, index) => (
+                <button
+                  key={index}
+                  className="curso-btn"
+                  onClick={() => setCursoSeleccionado(curso)}
+                >
+                  {curso}
+                </button>
+              ))}
+            </section>
+          </div>
+        </div>
       </div>
 
       {/* PANEL ULTRA+ */}
