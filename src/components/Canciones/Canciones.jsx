@@ -3,10 +3,13 @@ import "./Canciones.css";
 export default function Canciones() {
   const canciones = [
     {
+      id: 1,
       titulo: "Himno Nacional Argentino",
       letra: "Vicente López y Planes",
       musica: "Blas Parera",
       anio: "1812",
+      portada: "/assets/canciones/blas_parera.jpg",
+      iframe: ""
     },
     {
       titulo: "Himno Nacional Argentino (Instrumental)",

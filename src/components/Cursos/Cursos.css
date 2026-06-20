@@ -4,7 +4,7 @@
 .cursos {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 180px);
   background-image: url("../../assets/cursosImagenes/aula-vacia.jpg");
   background-size: cover;
   background-position: center;
@@ -45,19 +45,20 @@
   font-size: 2.6rem;
   color: var(--blanco);
   text-align: center;
-  margin: 60px 0 60px;
+  margin: 70px 0 70px;
   letter-spacing: 1px;
   text-shadow: 0 3px 10px rgba(0,0,0,0.6);
   animation: tituloIn 1.4s ease-out;
 }
 
 .turno-subtitulo {
+  width: 100%;
   font-size: 1.9rem;
   color: var(--blanco);
-  margin: 20px 0 20px;
-  text-align: center;
+  margin: 50px 0 50px;
+  text-align: left;
   letter-spacing: 1px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.4);
   animation: subtituloIn 1.4s ease-out;
 }
 
@@ -77,7 +78,6 @@
 .cursos-grid {
   display: grid;
   gap: 25px;
-  padding: 0 10%;
   animation: gridIn 1.2s ease-out;
 }
 
@@ -108,7 +108,7 @@
 .curso-btn:hover {
   transform: translateY(-5px) scale(1.03);
   background: rgba(255, 255, 255, 0.25);
-  color: var(--verde-oscuro);
+  color: var(--verde-superclaro);
   border-color: var(--verde-claro);
   box-shadow: 0 10px 22px rgba(0,0,0,0.35);
 }
@@ -133,13 +133,11 @@
 /* ===========================
   LAYOUT MAÑANA / TARDE
 =========================== */
-
 .turnos-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px;
-  margin-top: 40px;
+  gap: 50px;
 }
 
 .turno-col {
@@ -153,7 +151,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   justify-items: center;
 }
 
@@ -174,12 +172,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  width: 95%;
+  width: 75%;
   max-width: 100%;
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(14px) brightness(1.1);
   border-radius: 18px;
-  padding: 35px 30px;
+  padding: 20px 20px;
   z-index: 30;
   box-shadow: 0 12px 40px rgba(0,0,0,0.45);
   animation: panelIn 0.35s ease-out forwards;
@@ -204,9 +202,9 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(255,255,255,0.18);
+  background: var(--rojo);
   border: none;
-  color: white;
+  color: var(--blanco);
   font-size: 1.2rem;
   padding: 6px 10px;
   border-radius: 6px;
@@ -222,8 +220,8 @@
   TÍTULO DEL PANEL
 =========================== */
 .panel-titulo {
-  font-size: 2rem;
-  color: var(--blanco);
+  font-size: 1.7rem;
+  color: var(--verde-superclaro);
   text-align: center;
   margin-bottom: 20px;
   letter-spacing: 1px;
@@ -233,32 +231,88 @@
 /* ===========================
   SUBTÍTULOS DEL PANEL
 =========================== */
-.panel-subtitulo {
-  font-size: 1.4rem;
+.panel-subtitulo-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--verde-superclaro);
+  font-size: 1.3rem;
   margin: 20px 0 10px;
-  color: var(--blanco);
   text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  padding: 10px 12px;
+  gap: 30px;
+  border-radius: 10px;
+
+  /* Fondo sutil */
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.panel-subtitulo-doble span:first-child {
+  text-align: right;
+}
+
+.panel-subtitulo-doble span:last-child {
+  text-align: left;
 }
 
 /* ===========================
-  LISTA DE MATERIAS
+LISTA DE MATERIAS
 =========================== */
 .panel-lista {
   list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 12px;
+
+  /* Fondo vidrio */
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .panel-lista li {
-  margin: 6px 0;
-  font-size: 1.1rem;
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(120px, 1fr);
+  gap: 30px;
+  padding: 3px 0;
+  font-size: 1rem;
   color: var(--blanco);
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  white-space: nowrap; /* evita que se corte en dos líneas */
+}
+
+.panel-lista .materia {
+  text-align: right;
+}
+
+.panel-lista .profesor {
+  text-align: left;
+  opacity: 0.9;
 }
 
 /* ===========================
   TABLA DE HORARIOS
 =========================== */
+/* Título */
+.panel-subtitulo-simple {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--verde-superclaro);
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 10px 0 10px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  padding: 9px 9px;
+  gap: 30px;
+  border-radius: 10px;
+
+  /* Fondo sutil */
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Tabla */
 .panel-tabla table {
   width: 100%;
   border-collapse: collapse;
@@ -271,7 +325,7 @@
 
 .panel-tabla th,
 .panel-tabla td {
-  padding: 10px;
+  padding: 8px;
   text-align: center;
   color: var(--blanco);
   border-bottom: 1px solid rgba(255,255,255,0.15);

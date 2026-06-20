@@ -7,7 +7,7 @@ export default function Cursos() {
 
   // MAPEO ENTRE NOMBRE VISIBLE Y CLAVE REAL DEL OBJETO
   const mapaClaves = {
-    "AFTE": "AFTE",
+    AFTE: "AFTE",
     "1° A": "1_A",
     "1° B": "1_B",
     "2° A": "2_A",
@@ -48,6 +48,11 @@ export default function Cursos() {
   const cursosManana = listaCursos.slice(0, 10);
   const cursosTarde = listaCursos.slice(10);
 
+  const datosCurso = cursos[mapaClaves[cursoSeleccionado]];
+
+  const materias = datosCurso?.materias || [];
+  const horarios = datosCurso?.horarios || [];
+  
   return (
     <main className="cursos">
       <div className="cursos-contenido">
@@ -107,17 +112,22 @@ export default function Cursos() {
             <h3 className="panel-titulo">{cursoSeleccionado}</h3>
 
             {/* MATERIAS */}
-            <h4 className="panel-subtitulo">Materias y Profesores</h4>
+            <h4 className="panel-subtitulo-doble">
+              <span>Materias</span>
+              <span>Profesores</span>
+            </h4>
+            
             <ul className="panel-lista">
-              {cursos[mapaClaves[cursoSeleccionado]]?.materias?.map((m, i) => (
-                <li key={i}>
-                  <strong>{m[0]}</strong> — {m[1]}
+              {materias.map((item, index) => (
+                <li key={index}>
+                  <span className="materia">{item[0]}</span>
+                  <span className="profesor">{item[1]}</span>
                 </li>
               ))}
             </ul>
 
             {/* HORARIOS */}
-            <h4 className="panel-subtitulo">Horarios</h4>
+            <h4 className="panel-subtitulo-simple">Horarios</h4>
             <div className="panel-tabla">
               <table>
                 <thead>
@@ -139,7 +149,7 @@ export default function Cursos() {
                           <td key={j}>{col}</td>
                         ))}
                       </tr>
-                    )
+                    ),
                   )}
                 </tbody>
               </table>

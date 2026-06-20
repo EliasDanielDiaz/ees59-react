@@ -3,10 +3,12 @@
   --verde-oscuro: #1E3A2F;        /* Verde oscuro institucional */
   --verde-medio: #2E6B4F;           /* Verde medio TP1 */
   --verde-claro: #4A9B7B;          /* Verde claro (hover TP1) */
+  --verde-superclaro: #87d3b5;
   --blanco: #FFFFFF;      /* Blanco */
   --gris-texto: #333;
   --beige: #f5f0e6;
   --black: #000000;
+  --rojo: #bd3e3e;
 
   /* FONDOS Y NEUTROS */
   --color-gris: #F2F2F2;            /* Fondo suave */
