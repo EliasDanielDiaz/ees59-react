@@ -38,7 +38,6 @@ const subtitulos = [
   "Educación integral y consciente"
 ];
 
-
   return (
     <main className="home">
       <section className="carrusel">

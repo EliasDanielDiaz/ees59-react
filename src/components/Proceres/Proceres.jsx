@@ -5,38 +5,51 @@ import "./Proceres.css";
 export default function Proceres() {
   const [procerActivo, setProcerActivo] = useState(null);
 
+  console.log(proceres.length);
+
   return (
-    <main className="proceres">
+    <main className="proceres-main">
 
-      <h2>Próceres Argentinos</h2>
+      <h2 className="titulo-proceres">Próceres Argentinos</h2>
 
-      {/* GRID DE CARDS */}
+      {/* GRID */}
       <section className="proceres-grid">
         {proceres.map((p) => (
-          <div key={p.id} className="procer-card">
+          <article key={p.id} className="procer" data-procer={p.id}>
             <img src={p.imagen} alt={p.nombre} />
             <h3>{p.nombre}</h3>
-            <button onClick={() => setProcerActivo(p)}>Ver más</button>
-          </div>
+            <button className="btn-info" onClick={() => setProcerActivo(p)}>
+              Ver reseña
+            </button>
+          </article>
         ))}
       </section>
 
-      {/* PANEL LATERAL */}
-      {procerActivo && (
-        <>
-          <div className="overlay" onClick={() => setProcerActivo(null)}></div>
+      {/* PANEL FLOTANTE */}
+      <div className={`panel-flotante ${procerActivo ? "activo" : ""}`}>
+        {procerActivo && (
+          <div className="panel-contenido">
 
-          <aside className="panel">
-            <button className="cerrar" onClick={() => setProcerActivo(null)}>
-              ✕
-            </button>
+            <div className="panel-izquierda">
+              <img src={procerActivo.imagen} alt={procerActivo.nombre} />
+              <h3>{procerActivo.nombre}</h3>
 
-            <img src={procerActivo.imagen} alt={procerActivo.nombre} />
-            <h3>{procerActivo.nombre}</h3>
-            <p>{procerActivo.texto}</p>
-          </aside>
-        </>
-      )}
+              <button
+                className="btn-info"
+                onClick={() => setProcerActivo(null)}
+              >
+                Ocultar reseña
+              </button>
+            </div>
+
+            <div
+              className="panel-derecha"
+              dangerouslySetInnerHTML={{ __html: procerActivo.texto }}
+            ></div>
+
+          </div>
+        )}
+      </div>
 
     </main>
   );

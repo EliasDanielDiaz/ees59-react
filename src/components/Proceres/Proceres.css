@@ -1,99 +1,227 @@
-.proceres {
-  padding: 60px 10%;
+/* ============================
+    FONDO Y CONTENEDOR PRINCIPAL
+============================ */
+.proceres-main {
+  background: radial-gradient(circle at center, #e8f4ff 0%, #cde0f7 100%);
+  padding: 0px 20px 30px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ============================
+    TÍTULO
+============================ */
+.titulo-proceres {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #003366;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================
+    GRID DE PRÓCERES
+============================ */
+.proceres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ============================
+    CARD DE PRÓCER
+============================ */
+.procer {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.procer img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.procer h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003366;
+
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.proceres h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+/* Efecto hover tipo figurita brillante */
+.procer:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
 }
 
-/* GRID */
-.proceres-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
-
-/* CARD */
-.procer-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.procer-card img {
-  width: 100%;
+/* ============================
+    BOTÓN "VER RESEÑA"
+============================ */
+.btn-info {
+  margin-top: auto;
+  padding: 10px 16px;
+  background: #003366;
+  color: #fff;
+  border: none;
   border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.procer-card h3 {
-  margin: 15px 0;
+.btn-info:hover {
+  background: #004b99;
+  transform: translateY(-3px);
 }
 
-.procer-card button {
-  padding: 10px 15px;
-  background: #1e1e1e;
+/* ============================
+    PANEL FLOTANTE
+============================ */
+.panel-flotante {
+  position: fixed;
+  top: 0;
+  right: -100%; /* oculto */
+  width: 60%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.25);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s ease;
+  z-index: 9999;
+}
+
+.panel-flotante.activo {
+  right: 0; /* aparece */
+}
+
+/* ============================
+    CONTENIDO DEL PANEL
+============================ */
+.panel-contenido {
+  display: flex;
+  gap: 20px;
+}
+
+.panel-izquierda {
+  width: 40%;
+}
+
+.panel-izquierda img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.panel-izquierda h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #003366;
+}
+
+.panel-derecha {
+  width: 60%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ============================
+    BOTÓN CERRAR PANEL
+============================ */
+.panel-cerrar,
+.panel-izquierda .btn-info {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: #003366;
   color: white;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.procer-card button:hover {
-  background: #ffcc00;
-  color: #1e1e1e;
-}
-
-/* PANEL LATERAL */
-.panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 380px;
-  height: 100%;
-  background: white;
-  padding: 30px;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-  overflow-y: auto;
-  z-index: 1001;
-}
-
-.panel img {
-  width: 100%;
   border-radius: 10px;
-}
-
-.panel h3 {
-  margin-top: 20px;
-  font-size: 1.6rem;
-}
-
-.panel p {
-  margin-top: 15px;
-  line-height: 1.6;
-}
-
-/* BOTÓN CERRAR */
-.cerrar {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 1.8rem;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.25s ease;
 }
 
-/* OVERLAY */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1000;
+.panel-cerrar:hover,
+.panel-izquierda .btn-info:hover {
+  background: #004b99;
+}
+
+/* ============================
+    RESPONSIVE
+============================ */
+@media (max-width: 1024px) {
+  .proceres-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .panel-flotante {
+    width: 80%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 950px) {
+  .proceres-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .panel-flotante {
+    width: 90%;
+  }
+
+  /* Scroll vertical SOLO en la reseña */
+  .panel-derecha {
+    max-height: 95vh;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  /* Scrollbar elegante */
+  .panel-derecha::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .panel-derecha::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 550px) {
+  .proceres-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .panel-flotante {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .panel-izquierda img {
+    width: 120px;
+  }
+
+  .panel-derecha {
+    font-size: 0.9rem;
+  }
 }

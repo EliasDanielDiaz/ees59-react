@@ -117,7 +117,7 @@ HAMBURGUESA
   border: none;
   cursor: pointer;
   position: relative;
-  z-index: 5;
+  z-index: 30;
 }
 
 .hamburger span {
@@ -147,6 +147,7 @@ HAMBURGUESA
 @media (max-width: 1024px) {
   .hamburger {
     display: flex;
+    z-index: 30;
   }
   .nav-links {
     position: absolute;
