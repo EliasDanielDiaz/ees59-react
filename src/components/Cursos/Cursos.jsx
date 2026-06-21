@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Cursos.css";
-import cursos from "../../Data/cursos"; // ← BASE DE DATOS REAL
+import cursos from "../../Data/cursos";
 
 export default function Cursos() {
   const [cursoSeleccionado, setCursoSeleccionado] = useState(null);
@@ -66,7 +66,7 @@ export default function Cursos() {
               {cursosManana.map((curso, index) => (
                 <button
                   key={index}
-                  className="curso-btn"
+                  className="curso-boton"
                   onClick={() => setCursoSeleccionado(curso)}
                 >
                   {curso}
@@ -82,7 +82,7 @@ export default function Cursos() {
               {cursosTarde.map((curso, index) => (
                 <button
                   key={index}
-                  className="curso-btn"
+                  className="curso-boton"
                   onClick={() => setCursoSeleccionado(curso)}
                 >
                   {curso}
@@ -103,7 +103,7 @@ export default function Cursos() {
 
           <div className="panel-cursos">
             <button
-              className="panel-cerrar"
+              className="boton-cerrar"
               onClick={() => setCursoSeleccionado(null)}
             >
               Cerrar

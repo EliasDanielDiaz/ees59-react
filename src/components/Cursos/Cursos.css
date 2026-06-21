@@ -89,7 +89,7 @@
 /* ===========================
   BOTONES
 =========================== */
-.curso-btn {
+.curso-boton {
   padding: 25px;
   background: rgba(255, 255, 255, 0.15);
   color: var(--blanco);
@@ -105,7 +105,7 @@
   white-space: nowrap; /* Evita que se corte en dos líneas */
 }
 
-.curso-btn:hover {
+.curso-boton:hover {
   transform: translateY(-5px) scale(1.03);
   background: rgba(255, 255, 255, 0.25);
   color: var(--verde-superclaro);
@@ -198,7 +198,7 @@
 /* ===========================
   BOTÓN CERRAR
 =========================== */
-.panel-cerrar {
+.boton-cerrar {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -212,7 +212,7 @@
   transition: 0.2s ease;
 }
 
-.panel-cerrar:hover {
+.boton-cerrar:hover {
   background: rgba(255,255,255,0.32);
 }
 
@@ -351,7 +351,7 @@ RESPONSIVE
 }
 
 @media (max-width: 600px) {
-  .curso-btn {
+  .curso-boton {
     font-size: 1rem;
     padding: 12px;
   }

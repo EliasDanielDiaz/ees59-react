@@ -2,10 +2,13 @@
     FONDO Y CONTENEDOR PRINCIPAL
 ============================ */
 .proceres-main {
-  background: radial-gradient(circle at center, #e8f4ff 0%, #cde0f7 100%);
-  padding: 0px 20px 30px;
-  text-align: center;
+  background-image: url("../../../public/proceresImagenes/cabildo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 /* ============================
