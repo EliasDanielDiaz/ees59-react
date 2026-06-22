@@ -9,16 +9,20 @@ export default function Proceres() {
 
   return (
     <main className="proceres-main">
-
-      <h2 className="titulo-proceres">Próceres Argentinos</h2>
+      <section className="proceres-hero">
+        <h1 className="titulo-proceres">Próceres Argentinos</h1>
+        <p>
+          Los Padres De La Patria
+        </p>
+      </section>
 
       {/* GRID */}
       <section className="proceres-grid">
         {proceres.map((p) => (
-          <article key={p.id} className="procer" data-procer={p.id}>
+          <article key={p.id} className="procer-card" data-procer={p.id}>
             <img src={p.imagen} alt={p.nombre} />
             <h3>{p.nombre}</h3>
-            <button className="btn-info" onClick={() => setProcerActivo(p)}>
+            <button className="boton-resenia" onClick={() => setProcerActivo(p)}>
               Ver reseña
             </button>
           </article>
@@ -35,7 +39,7 @@ export default function Proceres() {
               <h3>{procerActivo.nombre}</h3>
 
               <button
-                className="btn-info"
+                className="boton-resenia"
                 onClick={() => setProcerActivo(null)}
               >
                 Ocultar reseña

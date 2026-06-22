@@ -8,12 +8,10 @@
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
-  position: sticky;
-  top: 0;
+  position: relative;
   border-bottom: 5px solid var(--verde-claro);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 20;
+  z-index: 10; /* BAJADO */
 }
 
 /* Overlay */
