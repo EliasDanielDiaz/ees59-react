@@ -1,80 +1,263 @@
-.contacto {
-  padding: 60px 10%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+/* ============================================
+    CONTACTO – FONDO + OVERLAY
+============================================ */
+
+.contacto-main {
+  background-image: url("../../assets/contactoImagenes/fondo_telefono.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 60px 0;
+  min-height: 100vh;
 }
 
-/* FORMULARIOS */
-.form-inscripcion,
-.form-contacto {
-  background: var(--color-gris);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: var(--sombra-suave);
+.contacto-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 1;
 }
 
-.form-inscripcion h2,
-.form-contacto h2 {
-  margin-bottom: 20px;
+.contacto-contenedor {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  color: white;
+  padding: 0 20px;
+}
+
+.contacto-contenedor > h2 {
   text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-label {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  display: block;
+/* ============================================
+    PANEL MODERNO (TP2 STYLE)
+============================================ */
+
+.panel {
+  margin-bottom: 25px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
 }
 
-select,
-textarea {
+.panel:hover {
+  transform: translateY(-2px);
+}
+
+/* Botón del panel */
+.panel .toggle {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid var(--color-borde);
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-/* BOTONES */
-.botones {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.btn-enviar {
-  background: var(--verde-oscuro);
-  color: var(--blanco);
-  padding: 12px 20px;
+  padding: 18px;
+  background: var(--verde-medio);
+  color: white;
+  font-size: 1.25rem;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
-  transition: var(--transicion);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.25s ease;
 }
 
-.btn-enviar:hover {
+.panel .toggle:hover {
   background: var(--verde-claro);
   color: var(--verde-oscuro);
 }
 
-.btn-limpiar {
-  background: var(--color-gris-medio);
-  color: var(--verde-oscuro);
-  padding: 12px 20px;
-  border: none;
+/* Contenido colapsable */
+.panel-contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.4s ease;
+  padding: 0 22px;
+}
+
+.panel.abierto .panel-contenido {
+  max-height: 1500px;
+  padding: 22px;
+}
+
+/* ============================================
+    FORMULARIOS – ESTILO MODERNO
+============================================ */
+
+.form-inscripcion,
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Títulos internos */
+.form-inscripcion h3,
+.form-contacto h3 {
+  text-align: center;
+  color: var(--verde-claro);
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+.form-inscripcion input,
+.form-inscripcion select,
+.form-contacto input,
+.form-contacto textarea {
+  padding: 12px;
   border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(4px);
+  transition: border 0.25s ease, background 0.25s ease;
+}
+
+.form-inscripcion input:focus,
+.form-inscripcion select:focus,
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border-color: var(--verde-claro);
+  background: rgba(255,255,255,0.25);
+  outline: none;
+}
+
+/* Labels */
+label {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Grupo de domicilio */
+.domicilio-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Placeholder blanco para inputs */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* Radios */
+.turno-grupo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-inscripcion label input[type="radio"] {
+  margin-right: 6px;
+}
+
+/* Opciones del select en negro */
+select option {
+  color: #000;
+  background: #fff;
+}
+
+/* ============================================
+    BOTONES
+============================================ */
+
+.botones-form {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.form-inscripcion button,
+.form-contacto button {
+  padding: 12px 20px;
+  background: var(--verde-medio);
+  color: white;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
-  transition: var(--transicion);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.btn-limpiar:hover {
-  background: var(--color-gris-hover);
+.form-inscripcion button:hover,
+.form-contacto button:hover {
+  background: var(--verde-claro);
+  color: var(--verde-oscuro);
+  transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .contacto {
-    padding: 40px 5%;
+/* Botón reset */
+.btn-reset {
+  background: rgba(255,255,255,0.3);
+  color: white;
+}
+
+.btn-reset:hover {
+  background: rgba(255,255,255,0.5);
+  color: var(--verde-oscuro);
+}
+
+/* ============================================
+    RESPONSIVE
+============================================ */
+
+@media (min-width: 950px) {
+  .form-inscripcion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 40px;
+  }
+
+  .columna-estudiante,
+  .columna-adulto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-inscripcion .botones-form,
+  .form-inscripcion .form-pregunta {
+    grid-column: span 2;
+  }
+
+  .domicilio-grupo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .turno-grupo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-inscripcion input,
+  .form-inscripcion textarea,
+  .form-inscripcion select {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .form-inscripcion button {
+    width: 100%;
   }
 }

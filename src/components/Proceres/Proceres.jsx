@@ -25,9 +25,9 @@ export default function Proceres() {
       {/* PANEL */}
       {panelAbierto && (
         <div className="panel-proceres activo">
-          <button className="panel-cerrar" onClick={cerrarPanel}>✕</button>
+          <button className="panel-cerrar" onClick={cerrarPanel}>Cerrar</button>
 
-          <h2>{procerSeleccionado.nombre}</h2>
+          <h2 className="panel-nombre">{procerSeleccionado.nombre}</h2>
           <img
             src={procerSeleccionado.imagen}
             alt={procerSeleccionado.nombre}

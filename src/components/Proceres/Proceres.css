@@ -178,16 +178,24 @@ CARD DE PRÓCER
   right: 0;
 }
 
+.panel-nombre {
+  color: var(--verde-superclaro);
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
 /* Botón cerrar */
 .panel-cerrar {
-  background: transparent;
+  background: var(--rojo);
   border: none;
-  font-size: 28px;
+  font-size: 20px;
   cursor: pointer;
   color: white;
   position: absolute;
   top: 15px;
   right: 20px;
+  padding: 3px 10px 10px;
+  border-radius: 10px;
 }
 
 /* Imagen del panel */
