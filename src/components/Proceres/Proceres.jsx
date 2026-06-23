@@ -3,58 +3,68 @@ import { proceres } from "../../data/proceresData";
 import "./Proceres.css";
 
 export default function Proceres() {
-  const [procerActivo, setProcerActivo] = useState(null);
+  const [panelAbierto, setPanelAbierto] = useState(false);
+  const [procerSeleccionado, setProcerSeleccionado] = useState(null);
 
-  console.log(proceres.length);
+  const abrirPanel = (procer) => {
+    setProcerSeleccionado(procer);
+    setPanelAbierto(true);
+  };
+
+  const cerrarPanel = () => {
+    setPanelAbierto(false);
+  };
 
   return (
-    <main className="proceres-main">
-      <section className="proceres-hero">
-        <h1 className="titulo-proceres">Próceres Argentinos</h1>
-        <p>
-          Los Padres De La Patria
-        </p>
-      </section>
+    <>
+      {/* OVERLAY */}
+      {panelAbierto && (
+        <div className="proceres-overlay" onClick={cerrarPanel}></div>
+      )}
 
-      {/* GRID */}
-      <section className="proceres-grid">
-        {proceres.map((p) => (
-          <article key={p.id} className="procer-card" data-procer={p.id}>
-            <img src={p.imagen} alt={p.nombre} />
-            <h3>{p.nombre}</h3>
-            <button className="boton-resenia" onClick={() => setProcerActivo(p)}>
-              Ver reseña
-            </button>
-          </article>
-        ))}
-      </section>
+      {/* PANEL */}
+      {panelAbierto && (
+        <div className="panel-proceres activo">
+          <button className="panel-cerrar" onClick={cerrarPanel}>✕</button>
 
-      {/* PANEL FLOTANTE */}
-      <div className={`panel-flotante ${procerActivo ? "activo" : ""}`}>
-        {procerActivo && (
-          <div className="panel-contenido">
+          <h2>{procerSeleccionado.nombre}</h2>
+          <img
+            src={procerSeleccionado.imagen}
+            alt={procerSeleccionado.nombre}
+            className="panel-img"
+          />
 
-            <div className="panel-izquierda">
-              <img src={procerActivo.imagen} alt={procerActivo.nombre} />
-              <h3>{procerActivo.nombre}</h3>
+          <div
+            className="panel-resena"
+            dangerouslySetInnerHTML={{ __html: procerSeleccionado.texto }}
+          ></div>
+        </div>
+      )}
+
+      {/* CONTENIDO PRINCIPAL */}
+      <main className="proceres-main">
+        <section className="proceres-hero">
+          <h1 className="titulo-proceres">Próceres Argentinos</h1>
+          <p>Los Padres De La Patria</p>
+        </section>
+
+        {/* GRID */}
+        <section className="proceres-grid">
+          {proceres.map((p) => (
+            <article key={p.id} className="procer-card">
+              <img src={p.imagen} alt={p.nombre} />
+              <h3>{p.nombre}</h3>
 
               <button
-                className="boton-resenia"
-                onClick={() => setProcerActivo(null)}
+                className="boton-resena"
+                onClick={() => abrirPanel(p)}
               >
-                Ocultar reseña
+                Ver reseña
               </button>
-            </div>
-
-            <div
-              className="panel-derecha"
-              dangerouslySetInnerHTML={{ __html: procerActivo.texto }}
-            ></div>
-
-          </div>
-        )}
-      </div>
-
-    </main>
+            </article>
+          ))}
+        </section>
+      </main>
+    </>
   );
 }

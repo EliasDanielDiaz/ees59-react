@@ -84,7 +84,7 @@ CARD DE PRÓCER
   box-shadow: 0 12px 22px rgba(0,0,0,0.25);
 }
 
-.procer-card:hover .boton-resenia {
+.procer-card:hover .boton-resena {
   transform: translateY(-3px);
   background: #004b99;
 }
@@ -116,7 +116,7 @@ CARD DE PRÓCER
 /* ============================
     BOTÓN "VER RESEÑA"
 ============================ */
-.boton-resenia {
+.boton-resena {
   position: relative;
   z-index: 2;
   margin-top: auto;
@@ -132,86 +132,80 @@ CARD DE PRÓCER
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.boton-resenia:hover {
+.boton-resena:hover {
   background: #004b99;
   transform: translateY(-3px);
 }
 
 /* ============================
-    PANEL FLOTANTE
+  OVERLAY (oscurece y blurea)
 ============================ */
-.panel-flotante {
+.proceres-overlay {
   position: fixed;
-  top: 156px;
-  right: -100%; /* oculto */
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  z-index: 99998;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ============================
+  PANEL LATERAL (como CURSOS)
+============================ */
+.panel-proceres {
+  position: fixed;
+  top: 0;
+  right: -100%;
   width: 60%;
-  height: calc(100vh - 156px);
-  background: #ffffff;
-  box-shadow: -4px 0 20px rgba(0,0,0,0.25);
+  max-width: 500px;
+  height: 100vh;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-left: 2px solid rgba(255,255,255,0.3);
   padding: 30px;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.4s ease;
-  z-index: 999999;
+  z-index: 99999;
+  isolation: isolate;
+  transition: right 0.35s ease;
+  overflow-y: auto;
 }
 
-.panel-flotante.activo {
-  right: 0; /* aparece */
+.panel-proceres.activo {
+  right: 0;
 }
 
-/* ============================
-    CONTENIDO DEL PANEL
-============================ */
-.panel-contenido {
-  display: flex;
-  gap: 20px;
-}
-
-.panel-izquierda {
-  width: 40%;
-}
-
-.panel-izquierda img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.panel-izquierda h3 {
-  margin-top: 15px;
-  font-size: 1.3rem;
-  color: #003366;
-}
-
-.panel-derecha {
-  width: 60%;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* ============================
-    BOTÓN CERRAR PANEL
-============================ */
-.panel-cerrar,
-.panel-izquierda .boton-resenia {
-  margin-top: 15px;
-  padding: 10px 16px;
-  background: #003366;
-  color: white;
+/* Botón cerrar */
+.panel-cerrar {
+  background: transparent;
   border: none;
-  border-radius: 10px;
+  font-size: 28px;
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background 0.25s ease;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
-.panel-cerrar:hover,
-.panel-izquierda .boton-resenia:hover {
-  background: #004b99;
+/* Imagen del panel */
+.panel-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Texto */
+.panel-resena {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* ============================
-    RESPONSIVE
+  RESPONSIVE
 ============================ */
 @media (max-width: 1024px) {
   .proceres-grid {
@@ -219,7 +213,7 @@ CARD DE PRÓCER
     gap: 1.5rem;
   }
 
-  .panel-flotante {
+  .panel-proceres {
     width: 80%;
     max-width: 700px;
   }
@@ -231,24 +225,22 @@ CARD DE PRÓCER
     gap: 1.2rem;
   }
 
-  .panel-flotante {
+  .panel-proceres {
     width: 90%;
   }
 
-  /* Scroll vertical SOLO en la reseña */
-  .panel-derecha {
+  .panel-resena {
     max-height: 95vh;
     overflow-y: auto;
     padding-right: 10px;
   }
 
-  /* Scrollbar elegante */
-  .panel-derecha::-webkit-scrollbar {
+  .panel-resena::-webkit-scrollbar {
     width: 6px;
   }
 
-  .panel-derecha::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.3);
+  .panel-resena::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
     border-radius: 4px;
   }
 }
@@ -259,16 +251,17 @@ CARD DE PRÓCER
     gap: 1rem;
   }
 
-  .panel-flotante {
+  .panel-proceres {
     width: 95%;
     padding: 1rem;
   }
 
-  .panel-izquierda img {
-    width: 120px;
+  .panel-img {
+    width: 100%;
   }
 
-  .panel-derecha {
+  .panel-resena {
     font-size: 0.9rem;
   }
 }
+
