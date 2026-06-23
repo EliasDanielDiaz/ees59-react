@@ -3,7 +3,7 @@
 ============================ */
 .proceres-main {
   position: relative;
-  background-image: url("../../../public/proceresImagenes/cabildo.jpg");
+  background-image: url("/proceresImagenes/cabildo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
