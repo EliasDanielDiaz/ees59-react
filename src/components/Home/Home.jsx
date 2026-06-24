@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 
-import img1 from "../../assets/homeImagenes/01edificio.jpg";
-import img2 from "../../assets/homeImagenes/02laboratorio.jpg";
-import img3 from "../../assets/homeImagenes/03alumnos.jpg";
-
-export default function Home() {
-  const imagenes = [img1, img2, img3];
-
+export default function Home({ imagenes, titulos, subtitulos }) {
   const [index, setIndex] = useState(0);
 
   const siguiente = () => {
@@ -24,19 +18,7 @@ export default function Home() {
     }, 5000);
 
     return () => clearInterval(intervalo);
-  }, []);
-
-  const titulos = [
-  "E.E.S. N° 59",
-  "Clases Prácticas",
-  "Compromiso con el Medio Ambiente"
-];
-
-const subtitulos = [
-  "Formando el futuro con Ciencias Naturales",
-  "Experimentación y pensamiento científico",
-  "Educación integral y consciente"
-];
+  }, [imagenes.length]);
 
   return (
     <main className="home">
@@ -56,7 +38,7 @@ const subtitulos = [
             <h2>{titulos[index]}</h2>
             <p>{subtitulos[index]}</p>
           </div>
-        </div> 
+        </div>
 
         <button className="btn-carrusel der" onClick={siguiente}>
           ›
@@ -73,7 +55,7 @@ const subtitulos = [
         </div>
       </section>
 
-      {/* TEXTO INSTITUCIONAL DEL TP1 */}
+      {/* TEXTO INSTITUCIONAL */}
       <section className="info-home">
         <div className="card-blanca">
           <h1>Bienvenidos a nuestra escuela</h1>
@@ -104,7 +86,8 @@ const subtitulos = [
 
       <section className="ubicacion">
         <h2>Ubicación</h2>
-        <p>Evaristo Iglesias 3570, Castelar, Morón, Buenos Aires.</p><br />
+        <p>Evaristo Iglesias 3570, Castelar, Morón, Buenos Aires.</p>
+        <br />
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.883903125005!2d-58.66361288809142!3d-34.68287947281316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc0c4244c9f4b%3A0xaa5b99f57b6ad568!2sEvaristo%20Iglesias%203570%2C%20B1712FMB%20Castelar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1781227832133!5m2!1ses-419!2sar"
           width="100%"
