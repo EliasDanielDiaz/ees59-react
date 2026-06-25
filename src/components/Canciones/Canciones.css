@@ -52,6 +52,7 @@
   CARD DE CANCION (Spotify Style)
 =========================== */
 .cancion-card {
+  height: 100%;
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.25);
@@ -64,6 +65,7 @@
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .cancion-card:hover {
@@ -91,6 +93,7 @@
   cursor: pointer;
   margin: 0.5rem auto;
   display: block;
+  margin-top: auto;
 }
 
 .cancion-iframe {
