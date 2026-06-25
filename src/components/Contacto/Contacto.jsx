@@ -1,76 +1,65 @@
 import { useState } from "react";
 import "./Contacto.css";
 
+// ============================
+// OBJETOS INICIALES
+// ============================
+const inscripcionInicial = {
+  nombreEstudiante: "",
+  dniEstudiante: "",
+  fechaNacimiento: "",
+  calle: "",
+  numero: "",
+  turno: "",
+  curso: "",
+  nombreAdulto: "",
+  dniAdulto: "",
+  telAdulto: "",
+  emailAdulto: "",
+  actividadLaboral: "",
+};
+
+const contactoInicial = {
+  nombre: "",
+  telefono: "",
+  mensaje: "",
+};
+
 export default function Contacto() {
-  // PANEL ABIERTO (solo uno a la vez)
+  // PANEL ABIERTO
   const [panelAbierto, setPanelAbierto] = useState(null);
-
-  const togglePanel = (panel) => {
+  const togglePanel = (panel) =>
     setPanelAbierto(panelAbierto === panel ? null : panel);
-  };
 
-  // ============================
   // FORMULARIO INSCRIPCIÓN
-  // ============================
-  const [inscripcion, setInscripcion] = useState({
-    nombreEstudiante: "",
-    dniEstudiante: "",
-    fechaNacimiento: "",
-    calle: "",
-    numero: "",
-    turno: "",
-    curso: "",
-    nombreAdulto: "",
-    dniAdulto: "",
-    telAdulto: "",
-    emailAdulto: "",
-    actividadLaboral: "",
-  });
-
-  const handleInscripcion = (e) => {
+  const [inscripcion, setInscripcion] = useState(inscripcionInicial);
+  const handleInscripcion = (e) =>
     setInscripcion({ ...inscripcion, [e.target.name]: e.target.value });
-  };
+  const limpiarInscripcion = () => setInscripcion(inscripcionInicial);
 
-  const limpiarInscripcion = () =>
-    setInscripcion({
-      nombreEstudiante: "",
-      dniEstudiante: "",
-      fechaNacimiento: "",
-      calle: "",
-      numero: "",
-      turno: "",
-      curso: "",
-      nombreAdulto: "",
-      dniAdulto: "",
-      telAdulto: "",
-      emailAdulto: "",
-      actividadLaboral: "",
-    });
-
-  // ============================
   // FORMULARIO CONTACTO
-  // ============================
-  const [contacto, setContacto] = useState({
-    nombre: "",
-    telefono: "",
-    mensaje: "",
-  });
-
-  const handleContacto = (e) => {
+  const [contacto, setContacto] = useState(contactoInicial);
+  const handleContacto = (e) =>
     setContacto({ ...contacto, [e.target.name]: e.target.value });
+  const limpiarContacto = () => setContacto(contactoInicial);
+
+  // SUBMIT INSCRIPCIÓN
+  const handleSubmitInscripcion = (e) => {
+    e.preventDefault();
+    console.log("Solicitud de inscripción enviada:", inscripcion);
+    limpiarInscripcion();
   };
 
-  const limpiarContacto = () =>
-    setContacto({
-      nombre: "",
-      telefono: "",
-      mensaje: "",
-    });
+  // SUBMIT CONTACTO
+  const handleSubmitContacto = (e) => {
+    e.preventDefault();
+    console.log("Mensaje de contacto enviado:", contacto);
+    limpiarContacto();
+  };
 
   return (
     <main className="contacto-main">
       <div className="contacto-contenedor">
-
         <h2>Inscripción y Contacto</h2>
 
         {/* =====================================================
@@ -84,14 +73,17 @@ export default function Contacto() {
           </button>
 
           <div className="panel-contenido">
-            <form className="form-inscripcion">
-
+            <form
+              className="form-inscripcion"
+              onSubmit={handleSubmitInscripcion}
+            >
               {/* COLUMNA ESTUDIANTE */}
               <div className="columna-estudiante">
                 <h3>Datos del Estudiante</h3>
 
-                <label>Apellidos y Nombres:</label>
+                <label htmlFor="nombreEstudiante">Apellidos y Nombres:</label>
                 <input
+                  id="nombreEstudiante"
                   type="text"
                   name="nombreEstudiante"
                   value={inscripcion.nombreEstudiante}
@@ -99,8 +91,9 @@ export default function Contacto() {
                   required
                 />
 
-                <label>DNI:</label>
+                <label htmlFor="dniEstudiante">DNI:</label>
                 <input
+                  id="dniEstudiante"
                   type="text"
                   name="dniEstudiante"
                   value={inscripcion.dniEstudiante}
@@ -108,8 +101,9 @@ export default function Contacto() {
                   required
                 />
 
-                <label>Fecha de Nacimiento:</label>
+                <label htmlFor="fechaNacimiento">Fecha de Nacimiento:</label>
                 <input
+                  id="fechaNacimiento"
                   type="date"
                   name="fechaNacimiento"
                   value={inscripcion.fechaNacimiento}
@@ -117,9 +111,10 @@ export default function Contacto() {
                   required
                 />
 
-                <label>Domicilio:</label>
+                <label className="label-grupo">Domicilio:</label>
                 <div className="domicilio-grupo">
                   <input
+                    id="calleDomicilio"
                     type="text"
                     name="calle"
                     placeholder="Calle"
@@ -128,6 +123,7 @@ export default function Contacto() {
                     required
                   />
                   <input
+                    id="numeroDomicilio"
                     type="text"
                     name="numero"
                     placeholder="Número"
@@ -140,8 +136,9 @@ export default function Contacto() {
                 <p className="form-pregunta">Turno de preferencia</p>
 
                 <div className="turno-grupo">
-                  <label>
+                  <label htmlFor="turnoManiana">
                     <input
+                      id="turnoManiana"
                       type="radio"
                       name="turno"
                       value="mañana"
@@ -152,8 +149,9 @@ export default function Contacto() {
                     Mañana
                   </label>
 
-                  <label>
+                  <label htmlFor="turnoTarde">
                     <input
+                      id="turnoTarde"
                       type="radio"
                       name="turno"
                       value="tarde"
@@ -164,8 +162,11 @@ export default function Contacto() {
                   </label>
                 </div>
 
-                <label>Curso al que desea inscribirse:</label>
+                <label htmlFor="cursoInscripcion">
+                  Curso al que desea inscribirse:
+                </label>
                 <select
+                  id="cursoInscripcion"
                   name="curso"
                   value={inscripcion.curso}
                   onChange={handleInscripcion}
@@ -185,8 +186,9 @@ export default function Contacto() {
               <div className="columna-adulto">
                 <h3>Datos del Adulto Responsable</h3>
 
-                <label>Apellidos y Nombres:</label>
+                <label htmlFor="nombreAdulto">Apellidos y Nombres:</label>
                 <input
+                  id="nombreAdulto"
                   type="text"
                   name="nombreAdulto"
                   value={inscripcion.nombreAdulto}
@@ -194,8 +196,9 @@ export default function Contacto() {
                   required
                 />
 
-                <label>DNI:</label>
+                <label htmlFor="dniAdulto">DNI:</label>
                 <input
+                  id="dniAdulto"
                   type="text"
                   name="dniAdulto"
                   value={inscripcion.dniAdulto}
@@ -203,8 +206,9 @@ export default function Contacto() {
                   required
                 />
 
-                <label>Teléfono:</label>
+                <label htmlFor="telAdulto">Teléfono:</label>
                 <input
+                  id="telAdulto"
                   type="tel"
                   name="telAdulto"
                   value={inscripcion.telAdulto}
@@ -212,8 +216,9 @@ export default function Contacto() {
                   required
                 />
 
-                <label>Correo electrónico:</label>
+                <label htmlFor="emailAdulto">Correo electrónico:</label>
                 <input
+                  id="emailAdulto"
                   type="email"
                   name="emailAdulto"
                   value={inscripcion.emailAdulto}
@@ -221,8 +226,9 @@ export default function Contacto() {
                   required
                 />
 
-                <label>Actividad Laboral:</label>
+                <label htmlFor="actividadLaboral">Actividad Laboral:</label>
                 <input
+                  id="actividadLaboral"
                   type="text"
                   name="actividadLaboral"
                   value={inscripcion.actividadLaboral}
@@ -256,10 +262,10 @@ export default function Contacto() {
           </button>
 
           <div className="panel-contenido">
-            <form className="form-contacto">
-
-              <label>Apellido y Nombre:</label>
+            <form className="form-contacto" onSubmit={handleSubmitContacto}>
+              <label htmlFor="nombreContacto">Apellido y Nombre:</label>
               <input
+                id="nombreContacto"
                 type="text"
                 name="nombre"
                 value={contacto.nombre}
@@ -267,8 +273,9 @@ export default function Contacto() {
                 required
               />
 
-              <label>Teléfono:</label>
+              <label htmlFor="telefonoContacto">Teléfono:</label>
               <input
+                id="telefonoContacto"
                 type="tel"
                 name="telefono"
                 value={contacto.telefono}
@@ -276,8 +283,9 @@ export default function Contacto() {
                 required
               />
 
-              <label>Mensaje o comentario:</label>
+              <label htmlFor="mensaje">Mensaje o comentario:</label>
               <textarea
+                id="mensaje"
                 rows="5"
                 name="mensaje"
                 placeholder="Deje aquí su mensaje..."
@@ -299,7 +307,6 @@ export default function Contacto() {
             </form>
           </div>
         </section>
-
       </div>
     </main>
   );

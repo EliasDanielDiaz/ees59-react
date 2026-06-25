@@ -23,7 +23,7 @@ export default function Canciones() {
   },
   {
     id: 2,
-    titulo: "Himno Nacional Argentino (Instrumental)",
+    titulo: "Himno Nac. Arg. (Instrumental)",
     letra: "Vicente López y Planes",
     musica: "Blas Parera",
     anio: "1812",

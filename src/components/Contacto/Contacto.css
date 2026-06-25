@@ -7,9 +7,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   padding: 60px 0;
-  min-height: 100vh;
+  min-height: 69vh;
 }
 
 .contacto-main::before {
@@ -38,7 +39,7 @@
 }
 
 /* ============================================
-    PANEL MODERNO (TP2 STYLE)
+    PANEL MODERNO
 ============================================ */
 
 .panel {
@@ -48,15 +49,15 @@
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .panel:hover {
   transform: translateY(-2px);
 }
 
-/* Botón del panel */
 .panel .toggle {
   width: 100%;
   padding: 18px;
@@ -93,26 +94,23 @@
     FORMULARIOS – ESTILO MODERNO
 ============================================ */
 
-.form-inscripcion,
-.form-contacto {
+form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
 /* Títulos internos */
-.form-inscripcion h3,
-.form-contacto h3 {
+form h3 {
   text-align: center;
   color: var(--verde-claro);
   margin-bottom: 10px;
 }
 
-/* Inputs */
-.form-inscripcion input,
-.form-inscripcion select,
-.form-contacto input,
-.form-contacto textarea {
+/* Inputs, selects y textarea */
+form input,
+form select,
+form textarea {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.3);
@@ -123,13 +121,13 @@
   transition: border 0.25s ease, background 0.25s ease;
 }
 
-.form-inscripcion input:focus,
-.form-inscripcion select:focus,
-.form-contacto input:focus,
-.form-contacto textarea:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
   border-color: var(--verde-claro);
   background: rgba(255,255,255,0.25);
-  outline: none;
+  outline: 2px solid var(--verde-claro);
+  outline-offset: 2px;
 }
 
 /* Labels */
@@ -147,12 +145,11 @@ label {
   gap: 12px;
 }
 
-/* Placeholder blanco para inputs */
+/* Placeholder blanco */
 input::placeholder,
 textarea::placeholder {
   color: rgba(255, 255, 255, 0.85);
 }
-
 
 /* Radios */
 .turno-grupo {
@@ -161,11 +158,11 @@ textarea::placeholder {
   align-items: center;
 }
 
-.form-inscripcion label input[type="radio"] {
+.turno-grupo input[type="radio"] {
   margin-right: 6px;
 }
 
-/* Opciones del select en negro */
+/* Opciones del select */
 select option {
   color: #000;
   background: #fff;
@@ -182,8 +179,7 @@ select option {
   justify-content: center;
 }
 
-.form-inscripcion button,
-.form-contacto button {
+form button {
   padding: 12px 20px;
   background: var(--verde-medio);
   color: white;
@@ -195,8 +191,7 @@ select option {
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.form-inscripcion button:hover,
-.form-contacto button:hover {
+form button:hover {
   background: var(--verde-claro);
   color: var(--verde-oscuro);
   transform: translateY(-2px);
@@ -250,14 +245,14 @@ select option {
     gap: 10px;
   }
 
-  .form-inscripcion input,
-  .form-inscripcion textarea,
-  .form-inscripcion select {
+  form input,
+  form textarea,
+  form select {
     font-size: 0.95rem;
     padding: 10px;
   }
 
-  .form-inscripcion button {
+  form button {
     width: 100%;
   }
 }
