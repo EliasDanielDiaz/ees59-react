@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-import SobreNosotros from "./components/SobreNosotros/SobreNosotros";
-import Cursos from "./components/Cursos/Cursos";
-import Canciones from "./components/Canciones/Canciones";
-import Proceres from "./components/Proceres/Proceres";
-import Contacto from "./components/Contacto/Contacto";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Home from "./components/Home/Home.jsx";
+import SobreNosotros from "./components/SobreNosotros/SobreNosotros.jsx";
+import Cursos from "./components/Cursos/Cursos.jsx";
+import Canciones from "./components/Canciones/Canciones.jsx";
+import Proceres from "./components/Proceres/Proceres.jsx";
+import Contacto from "./components/Contacto/Contacto.jsx";
 
 // Importamos las imágenes del carrusel
 import img1 from "./assets/homeImagenes/01edificio.jpg";
