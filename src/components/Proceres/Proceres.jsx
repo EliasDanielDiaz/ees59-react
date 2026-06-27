@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { proceres } from "../../data/proceresData";
+import { proceres } from "../../Data/proceresData";
 import "./Proceres.css";
 
 export default function Proceres() {
