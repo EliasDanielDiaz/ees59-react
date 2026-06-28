@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Cursos.css";
 import cursos from "../../Data/cursos";
+import abreviaturasMaterias from "../../Data/abreviaturasMaterias";
 
 export default function Cursos() {
   const [cursoSeleccionado, setCursoSeleccionado] = useState(null);
@@ -53,6 +54,19 @@ export default function Cursos() {
   const materias = datosCurso?.materias || [];
   const horarios = datosCurso?.horarios || [];
   
+  const abreviarMateria = (nombre) => {
+  const data = abreviaturasMaterias[nombre];
+
+  if (!data) return nombre; // si no existe abreviatura, deja el nombre original
+
+  const ancho = window.innerWidth;
+
+  if (ancho < 550) return data.muyCorta || data.corta || nombre;
+  if (ancho < 950) return data.corta || nombre;
+
+  return nombre;
+};
+
   return (
     <main className="cursos">
       <div className="cursos-contenido">
@@ -120,7 +134,7 @@ export default function Cursos() {
             <ul className="panel-lista">
               {materias.map((item, index) => (
                 <li key={index}>
-                  <span className="materia">{item[0]}</span>
+                  <span className="materia">{abreviarMateria(item[0])}</span>
                   <span className="profesor">{item[1]}</span>
                 </li>
               ))}
@@ -146,7 +160,7 @@ export default function Cursos() {
                     (fila, i) => (
                       <tr key={i}>
                         {fila.map((col, j) => (
-                          <td key={j}>{col}</td>
+                          <td key={j}>{abreviarMateria(col)}</td>
                         ))}
                       </tr>
                     ),

@@ -1,20 +1,20 @@
 :root {
-  /* COLORES PRINCIPALES DEL TP1 */
-  --verde-oscuro: #1E3A2F;        /* Verde oscuro institucional */
-  --verde-medio: #2E6B4F;           /* Verde medio TP1 */
-  --verde-claro: #4A9B7B;          /* Verde claro (hover TP1) */
-  --verde-superclaro: #87d3b5;
-  --blanco: #FFFFFF;      /* Blanco */
-  --gris-texto: #333;
-  --beige: #f5f0e6;
+  /* NEGRO, GRISES Y BLANCO */
   --black: #000000;
+  --color-gris-oscuro: #1A1A1A;
+  --gris-texto: #333;
+  --color-gris: #F2F2F2;
+  --blanco: #FFFFFF;
+  
+  /* COLORES */
+  --verde-oscuro: #1E3A2F;
+  --verde-medio: #2E6B4F;
+  --verde-claro: #4A9B7B;
+  --verde-superclaro: #87d3b5;
+  --beige: #f5f0e6;
   --rojo: #bd3e3e;
 
-  /* FONDOS Y NEUTROS */
-  --color-gris: #F2F2F2;            /* Fondo suave */
-  --color-gris-oscuro: #1A1A1A;     /* Negro suave */
-
-  /* SOMBRAS */
+  /* SOMBRAS NADA MAS =) */
   --sombra-suave: 0 0 10px rgba(0,0,0,0.1);
   --sombra-media: 0 0 15px rgba(0,0,0,0.2);
 

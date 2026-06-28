@@ -1,9 +1,11 @@
 .footer {
+  position: relative;
   border-top: 3px solid var(--verde-claro);
   background: var(--verde-oscuro);
   color: var(--blanco);
   text-align: center;
   padding: 25px 10px;
+  z-index: 100;
 }
 
 .footer p {

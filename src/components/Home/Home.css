@@ -3,6 +3,23 @@
 /* ===================
   CONTENEDOR GENERAL
 ====================== */
+.fondo-cesped {
+  position: relative;
+  background-image: url(../../assets/homeImagenes/cesped.jpg);
+  background-attachment: fixed;
+  animation: fadeIn 1.2s ease-out;
+  z-index: 0;
+  padding-bottom: 20px;
+}
+
+.fondo-cesped::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.50);
+  z-index: 1;
+}
+
 .home {
   width: 100%;
 }
@@ -19,6 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .carrusel-img {
@@ -118,13 +136,19 @@
   INFO INSTITUCIONAL
 ======================= */
 .card-blanca {
-  background: #ffffff;
-  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.15); /* transparencia real */
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  padding: 35px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* borde glass */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* sombra más realista */
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .info-home {
@@ -135,38 +159,67 @@
 .info-home h1 {
   font-size: 2.4rem;
   margin-bottom: 20px;
-  color: var(--verde-oscuro);
+  color: var(--verde-superclaro);
 }
 
 .info-home p {
   font-size: 1.1rem;
   margin-bottom: 15px;
   line-height: 1.6;
+  color: var(--blanco);
 }
 
 .info-home .invitacion {
-  color: var(--verde-medio);
+  color: var(--verde-superclaro);
   font-style: italic;
 }
 
+.card-blanca:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.card-blanca:hover h1 {color: var(--verde-oscuro);}
+.card-blanca:hover p {color: var(--black);}
+.card-blanca:hover .invitacion {color: var(--verde-oscuro);}
 
 /* ===============
   UBICACIÓN
 =================== */
 .ubicacion {
-  padding: 10px 40px 40px;
+  position: relative;
+  margin: 0px 20px 0px 20px;
+  padding: 20px 30px 30px 30px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  z-index: 2;
 }
 
 .ubicacion h2 {
   font-size: 2rem;
   margin-bottom: 15px;
+  color: var(--verde-superclaro);
 }
 
 .ubicacion p {
   font-size: 1.1rem;
-  color: var(--color-gris-oscuro);
+  color: var(--blanco);
 }
+
+.ubicacion:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.ubicacion:hover h2 {color: var(--verde-oscuro);}
+.ubicacion:hover p {color: var(--black);}
 
 /* ================
   RESPONSIVE
