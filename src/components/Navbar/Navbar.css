@@ -86,7 +86,7 @@ MENÚ
 
 .nav-links li a {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 10px 10px;
   background-color: rgba(255, 255, 255, 0.25);
   color: var(--blanco);
   font-weight: 500;
@@ -142,6 +142,12 @@ HAMBURGUESA
 /* ============================================
     RESPONSIVE
 ============================================ */
+@media (max-width: 1215px) {
+  .nav-container {
+    padding: 0;
+  }
+}
+
 @media (max-width: 1024px) {
   .hamburger {
     display: flex;
