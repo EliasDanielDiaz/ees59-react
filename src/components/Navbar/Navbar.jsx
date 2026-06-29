@@ -30,8 +30,9 @@ export default function Navbar() {
           <Link to="/" className="logo-link">
             <img src={logo} alt="Logo E.E.S. N° 59" className="logo-img" />
             <span className="nav-logo-text">
-              E.E.S. N° 59 <br />
-              Modalidad: Ciencias Naturales.
+              <span className="line1">E.E.S. N° 59</span>
+              <span className="line2">Modalidad: </span>
+              <span className="line3">Ciencias Naturales.</span>
             </span>
           </Link>
         </div>

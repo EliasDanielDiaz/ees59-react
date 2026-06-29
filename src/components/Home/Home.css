@@ -138,7 +138,7 @@
 .card-blanca {
   background: rgba(255, 255, 255, 0.15); /* transparencia real */
   backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 14px;
   padding: 35px 40px;
   border: 1px solid rgba(255, 255, 255, 0.5); /* borde glass */
@@ -194,7 +194,7 @@
   text-align: center;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);

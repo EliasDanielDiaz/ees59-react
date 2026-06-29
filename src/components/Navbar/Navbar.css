@@ -1,17 +1,16 @@
-/* ============================================
-    NAVBAR (HEADER TP1 ADAPTADO A REACT)
-============================================ */
+/* =======================
+    NAVBAR 
+======================= */
 .navbar {
   width: 100%;
   padding: 25px;
   background-image: url("https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: scroll;
   position: relative;
   border-bottom: 5px solid var(--verde-claro);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  z-index: 10; /* BAJADO */
+  z-index: 10;
 }
 
 /* Overlay */
@@ -24,7 +23,6 @@
 }
 
 .nav-container {
-  display: flex;
   position: relative;
   z-index: 5;
   display: flex;
@@ -34,15 +32,14 @@
   padding: 0 25px;
 }
 
-/* ============================================
+/* ==============================
 LOGO + TEXTO
-============================================ */
+============================== */
 .nav-logo {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 15px;
-  text-decoration: none;
-  width: fit-content;
 }
 
 .nav-logo img {
@@ -58,11 +55,7 @@ LOGO + TEXTO
 }
 
 .logo-link {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-decoration: none;
-  width: fit-content;
+  display: contents;
 }
 
 .nav-logo-text {
@@ -70,13 +63,13 @@ LOGO + TEXTO
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
   font-size: 1.6rem;
   font-weight: bold;
+  line-height: 1.2;
 }
 
 /* ============================================
 MENÚ
 ============================================ */
 .nav-links {
-  flex-wrap: wrap;
   list-style: none;
   display: flex;
   gap: 12px;
@@ -114,7 +107,6 @@ HAMBURGUESA
   background: none;
   border: none;
   cursor: pointer;
-  position: relative;
   z-index: 30;
 }
 
@@ -140,7 +132,7 @@ HAMBURGUESA
 }
 
 /* ============================================
-    RESPONSIVE
+RESPONSIVE
 ============================================ */
 @media (max-width: 1215px) {
   .nav-container {
@@ -148,11 +140,12 @@ HAMBURGUESA
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1165px) {
   .hamburger {
     display: flex;
     z-index: 30;
   }
+  
   .nav-links {
     position: absolute;
     top: 110px;
@@ -168,15 +161,30 @@ HAMBURGUESA
     pointer-events: none;
     transition: opacity 0.35s ease;
   }
-
+  
   .nav-links.open {
     opacity: 1;
     pointer-events: auto;
   }
-
+  
   .nav-logo img {
     width: 90px;
     height: 90px;
+  }
+}
+
+@media (min-width: 551px) {
+  .line1 {
+    display: block;
+  }
+
+  .line2,
+  .line3 {
+    display: inline;
+  }
+
+  .line2::after {
+    content: " ";
   }
 }
 
@@ -187,7 +195,13 @@ HAMBURGUESA
   }
 
   .nav-logo-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    display: block;
   }
 
   .nav-links {
