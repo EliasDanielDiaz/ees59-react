@@ -167,8 +167,18 @@
 /* ===========================
   RESPONSIVE
 =========================== */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .sobreNosotros-hero h1 {
     font-size: 2.2rem;
+  }
+
+  .sobreNosotros-cards {
+    gap: 50px;
+    padding: 50px 10%;
+  }
+
+  .sobreNosotros-cards {
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 }
