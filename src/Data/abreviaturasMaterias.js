@@ -15,12 +15,12 @@ const abreviaturasMaterias = {
   },
 
   "Biología, Genética y Sociedad": {
-    corta: "Bio. Gen. y Soc.",
+    corta: "Bio. Gen. Soc.",
     muyCorta: "B.G.S.",
   },
 
   "Ciencias de la Tierra": {
-    corta: "Cs. de la T.",
+    corta: "Cs. Tierra.",
     muyCorta: "C.T.",
   },
 
@@ -64,8 +64,8 @@ const abreviaturasMaterias = {
     muyCorta: "F.H.C.T.",
   },
 
-  "Físicoquímica": {
-    corta: "Fís. Quím.",
+  "Fisicoquímica": {
+    corta: "Fis-quím.",
     muyCorta: "F.Q.",
   },
 
@@ -115,7 +115,7 @@ const abreviaturasMaterias = {
   },
 
   "Política y Ciudadanía": {
-    corta: "Pol. y Ciud.",
+    corta: "Pol. Ciud.",
     muyCorta: "P.C.",
   },
 
@@ -130,12 +130,12 @@ const abreviaturasMaterias = {
   },
 
   "Salud y Adolescencia": {
-    corta: "Sal. y Ado.",
+    corta: "Sal. Ado.",
     muyCorta: "S.A.",
   },
 
   "Trabajo y Ciudadanía": {
-    corta: "Trab. y Ciud.",
+    corta: "Trab. Ciud.",
     muyCorta: "T.C.",
   },
 };

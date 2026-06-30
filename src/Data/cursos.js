@@ -72,7 +72,7 @@ const cursos = {
       ["Construcción de la Ciudadanía", "SILVELA, Pablo"],
       ["Educación Artística", "PAZ, Fernando"],
       ["Educación Física", "KIENER, Victoria"],
-      ["Físicoquímica", "ÁLVAREZ, Paula"],
+      ["Fisicoquímica", "ÁLVAREZ, Paula"],
       ["Geografía", "PATISCO, Hebe"],
       ["Historia", "GUERRATO, Virginia"],
       ["Inglés", "BUSTINGORRI, Guadalupe"],
@@ -83,7 +83,7 @@ const cursos = {
     horarios: [
       ["7:30 a 8:30", "Educación Artística", "Prácticas del Lenguaje", "Matemática", "Biología", "Geografía"],
       ["8:30 a 9:30", "Educación Artística", "Prácticas del Lenguaje", "Matemática", "Biología", "Geografía"],
-      ["9:40 a 10:40", "Físicoquímica", "Inglés", "Físicoquímica", "Matemática", "Construcción de la Ciudadanía"],
+      ["9:40 a 10:40", "Fisicoquímica", "Inglés", "Fisicoquímica", "Matemática", "Construcción de la Ciudadanía"],
       ["10:50 a 11:50", "Prácticas del Lenguaje", "Inglés", "Historia", "Matemática", "Construcción de la Ciudadanía"],
       ["11:50 a 12:50", "Prácticas del Lenguaje", "Educación Física", "Historia", "-----", "Educación Física"]
     ]
@@ -95,7 +95,7 @@ const cursos = {
       ["Construcción de la Ciudadanía", "FUENTES, Alina"],
       ["Educación Artística", "CUADRADO, Silvia"],
       ["Educación Física", "GOLD, Victor / ZICCHERO, Luciana"],
-      ["Físicoquímica", "FLORES SÁNCHEZ, Ismael / ARAPA, Walter"],
+      ["Fisicoquímica", "FLORES SÁNCHEZ, Ismael / ARAPA, Walter"],
       ["Geografía", "VALDÉZ, Leticia"],
       ["Historia", "CHIESA, Francisco"],
       ["Inglés", "CARABAJAL, Pamela"],
@@ -107,8 +107,8 @@ const cursos = {
       ["7:30 a 8:30", "Matemática", "Educación Artística", "Educación Artística", "Inglés", "Prácticas del Lenguaje"],
       ["8:30 a 9:30", "Matemática", "Educación Física", "Prácticas del Lenguaje", "Inglés", "Prácticas del Lenguaje"],
       ["9:40 a 10:40", "Geografía", "Construcción de la Ciudadanía", "Prácticas del Lenguaje", "Biología", "Matemática"],
-      ["10:50 a 11:50", "Geografía", "Físicoquímica", "Historia", "Biología", "Matemática"],
-      ["11:50 a 12:50", "Historia", "Físicoquímica", "-----", "Construcción de la Ciudadanía", "Educación Física"]
+      ["10:50 a 11:50", "Geografía", "Fisicoquímica", "Historia", "Biología", "Matemática"],
+      ["11:50 a 12:50", "Historia", "Fisicoquímica", "-----", "Construcción de la Ciudadanía", "Educación Física"]
     ]
   },
 
@@ -118,7 +118,7 @@ const cursos = {
       ["Construcción de la Ciudadanía", "FUENTES, Alina"],
       ["Educación Artística", "CUADRADO, Silvia"],
       ["Educación Física", "BEGHELLI, Juan"],
-      ["Físicoquímica", "ROJAS, Graciela"],
+      ["Fisicoquímica", "ROJAS, Graciela"],
       ["Geografía", "PATISCO, Hebe"],
       ["Historia", "RODAS, Jorge"],
       ["Inglés", "TARTAGLINI, Javier"],
@@ -129,8 +129,8 @@ const cursos = {
     horarios: [
       ["7:30 a 8:30", "Biología", "Construcción de la Ciudadanía", "Geografía", "Matemática", "Historia"],
       ["8:30 a 9:30", "Biología", "Construcción de la Ciudadanía", "Geografía", "Matemática", "Historia"],
-      ["9:40 a 10:40", "Físicoquímica", "Matemática", "Prácticas del Lenguaje", "Inglés", "Prácticas del Lenguaje"],
-      ["10:50 a 11:50", "Físicoquímica", "Matemática", "Prácticas del Lenguaje", "Inglés", "Educación Física"],
+      ["9:40 a 10:40", "Fisicoquímica", "Matemática", "Prácticas del Lenguaje", "Inglés", "Prácticas del Lenguaje"],
+      ["10:50 a 11:50", "Fisicoquímica", "Matemática", "Prácticas del Lenguaje", "Inglés", "Educación Física"],
       ["11:50 a 12:50", "Educación Artística", "Prácticas del Lenguaje", "Educación Artística", "-----", "Educación Física"]
     ]
   },
@@ -141,7 +141,7 @@ const cursos = {
       ["Construcción de la Ciudadanía", "GOLD, Victor / RIZZA, Juan Ignacio"],
       ["Educación Artística", "RODRÍGUEZ, Rocío"],
       ["Educación Física", "TRAMAGLIA, Daniela / RAMOS, Santiago"],
-      ["Físicoquímica", "GUERRERO, Marcela"],
+      ["Fisicoquímica", "GUERRERO, Marcela"],
       ["Geografía", "VALDÉZ, Leticia"],
       ["Historia", "ROUSSINEAU, Gisela"],
       ["Inglés", "CASINELLI, Mariana / ORREGO, Mónica"],
@@ -152,9 +152,9 @@ const cursos = {
     horarios: [
       ["7:30 a 8:30", "Matemática", "Biología", "Prácticas del Lenguaje", "Geografía", "Prácticas del Lenguaje"],
       ["8:30 a 9:30", "Matemática", "Biología", "Prácticas del Lenguaje", "Construcción de la Ciudadanía", "Prácticas del Lenguaje"],
-      ["9:40 a 10:40", "Inglés", "Construcción de la Ciudadanía", "Educación Física", "Historia", "Físicoquímica"],
+      ["9:40 a 10:40", "Inglés", "Construcción de la Ciudadanía", "Educación Física", "Historia", "Fisicoquímica"],
       ["10:50 a 11:50", "Inglés", "Educación Física", "Educación Artística", "Historia", "Matemática"],
-      ["11:50 a 12:50", "Geografía", "Físicoquímica", "Educación Artística", "-----", "Matemática"]
+      ["11:50 a 12:50", "Geografía", "Fisicoquímica", "Educación Artística", "-----", "Matemática"]
     ]
   },
 
@@ -259,7 +259,7 @@ const cursos = {
       ["Construcción de la Ciudadanía", "SILVELA, Pablo"],
       ["Educación Artística", "GONZÁLEZ, José"],
       ["Educación Física", "ZICCHERO, Luciana"],
-      ["Físicoquímica", "AGUILAR, Patricia"],
+      ["Fisicoquímica", "AGUILAR, Patricia"],
       ["Geografía", "PATISCO, Hebe"],
       ["Historia", "FLORES, Luciana"],
       ["Inglés", "SAAVEDRA, Maria Victoria"],
@@ -270,8 +270,8 @@ const cursos = {
     horarios: [
       ["13:00 a 14:00", "Prácticas del Lenguaje", "Geografía", "Biología", "Prácticas del Lenguaje", "Educación Física"],
       ["14:00 a 15:00", "Prácticas del Lenguaje", "Geografía", "Biología", "Prácticas del Lenguaje", "Educación Física"],
-      ["15:10 a 16:10", "Físicoquímica", "Historia", "Inglés", "Matemática", "Educación Artística"],
-      ["16:20 a 17:20", "Físicoquímica", "Historia", "Inglés", "Matemática", "Educación Artística"],
+      ["15:10 a 16:10", "Fisicoquímica", "Historia", "Inglés", "Matemática", "Educación Artística"],
+      ["16:20 a 17:20", "Fisicoquímica", "Historia", "Inglés", "Matemática", "Educación Artística"],
       ["17:20 a 18:20", "-----", "Matemática", "Matemática", "Construcción de la Ciudadanía", "Construcción de la Ciudadanía"]
     ]
   },
@@ -282,7 +282,7 @@ const cursos = {
       ["Construcción de la Ciudadanía", "FUENTES, Alina"],
       ["Educación Artística", "GONZÁLEZ, José"],
       ["Educación Física", "PONCE, Fernando"],
-      ["Físicoquímica", "PONCE, Marcelo"],
+      ["Fisicoquímica", "PONCE, Marcelo"],
       ["Geografía", "TORRES, Elías"],
       ["Historia", "GARIBOLDI, Daniel"],
       ["Inglés", "CARABAJAL, Pamela"],
@@ -294,8 +294,8 @@ const cursos = {
       ["13:00 a 14:00", "Prácticas del Lenguaje", "Prácticas del Lenguaje", "Matemática", "Construcción de la Ciudadanía", "Educación Artística"],
       ["14:00 a 15:00", "Prácticas del Lenguaje", "Prácticas del Lenguaje", "Matemática", "Construcción de la Ciudadanía", "Educación Artística"],
       ["15:10 a 16:10", "Geografía", "Matemática", "Biología", "Historia", "Educación Física"],
-      ["16:20 a 17:20", "Inglés", "Matemática", "Físicoquímica", "Historia", "Geografía"],
-      ["17:20 a 18:20", "Inglés", "Biología", "Físicoquímica", "Educación Física", "-----"]
+      ["16:20 a 17:20", "Inglés", "Matemática", "Fisicoquímica", "Historia", "Geografía"],
+      ["17:20 a 18:20", "Inglés", "Biología", "Fisicoquímica", "Educación Física", "-----"]
     ]
   },
 
