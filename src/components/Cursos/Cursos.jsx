@@ -74,9 +74,9 @@ export default function Cursos() {
 
         <div className="turnos-container">
           {/* TURNO MAÑANA */}
-          <div className="turno-col">
+          <div className="turno-col-mañana">
             <h3 className="turno-subtitulo">Turno Mañana</h3>
-            <section className="cursos-grid manana">
+            <section className="cursos-grid-manana">
               {cursosManana.map((curso, index) => (
                 <button
                   key={index}
@@ -90,9 +90,9 @@ export default function Cursos() {
           </div>
 
           {/* TURNO TARDE */}
-          <div className="turno-col">
+          <div className="turno-col-tarde">
             <h3 className="turno-subtitulo">Turno Tarde</h3>
-            <section className="cursos-grid tarde">
+            <section className="cursos-grid-tarde">
               {cursosTarde.map((curso, index) => (
                 <button
                   key={index}
