@@ -54,6 +54,7 @@ export default function Cursos() {
   const materias = datosCurso?.materias || [];
   const horarios = datosCurso?.horarios || [];
   
+  // Materias de "Horarios"
   const abreviarMateria = (nombre) => {
   const data = abreviaturasMaterias[nombre];
 
@@ -61,9 +62,22 @@ export default function Cursos() {
 
   const ancho = window.innerWidth;
 
-  if (ancho < 550) return data.muyCorta || data.corta || nombre;
-  if (ancho < 950) return data.corta || nombre;
+  if (ancho < 975) return data.muyCorta || data.corta || nombre;
+  if (ancho < 1120) return data.corta || nombre;
 
+  return nombre;
+};
+  // Materias de "Materias y Profesores"
+  const abreviarMateriaPanel = (nombre) => {
+  const data = abreviaturasMaterias[nombre];
+  if (!data) return nombre;
+
+  const ancho = window.innerWidth;
+
+  // En 800px o menos → usar corta
+  if (ancho < 800) return data.corta || nombre;
+
+  // En pantallas grandes → nombre completo
   return nombre;
 };
 
@@ -127,14 +141,14 @@ export default function Cursos() {
 
             {/* MATERIAS */}
             <h4 className="panel-subtitulo-doble">
-              <span>Materias</span>
-              <span>Profesores</span>
+              <span className="materias-profes">Materias</span>
+              <span className="profes">Profesores</span>
             </h4>
             
             <ul className="panel-lista">
               {materias.map((item, index) => (
                 <li key={index}>
-                  <span className="materia">{abreviarMateria(item[0])}</span>
+                  <span className="materia">{abreviarMateriaPanel(item[0])}</span>
                   <span className="profesor">{item[1]}</span>
                 </li>
               ))}
