@@ -262,13 +262,13 @@ CARD DE PRÓCER
     height: 97%;
   }
 }
-@media (min-width: 801px) {
+@media (min-width: 851px) {
 .panel-texto {
     overflow-y: auto;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .panel-proceres {
     flex-direction: column;   /* FOTO ARRIBA / TEXTO ABAJO */
     width: 70%;
