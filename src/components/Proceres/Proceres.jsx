@@ -25,19 +25,26 @@ export default function Proceres() {
       {/* PANEL */}
       {panelAbierto && (
         <div className="panel-proceres activo">
-          <button className="panel-cerrar" onClick={cerrarPanel}>Cerrar</button>
+          <button className="panel-cerrar" onClick={cerrarPanel}>
+            Cerrar
+          </button>
 
-          <h2 className="panel-nombre">{procerSeleccionado.nombre}</h2>
+          {/* FOTO IZQUIERDA */}
           <img
             src={procerSeleccionado.imagen}
             alt={procerSeleccionado.nombre}
             className="panel-img"
           />
 
-          <div
-            className="panel-resena"
-            dangerouslySetInnerHTML={{ __html: procerSeleccionado.texto }}
-          ></div>
+          {/* TEXTO DERECHA */}
+          <div className="panel-texto">
+            <h2 className="panel-nombre">{procerSeleccionado.nombre}</h2>
+
+            <div
+              className="panel-resena"
+              dangerouslySetInnerHTML={{ __html: procerSeleccionado.texto }}
+            ></div>
+          </div>
         </div>
       )}
 
@@ -68,3 +75,4 @@ export default function Proceres() {
     </>
   );
 }
+

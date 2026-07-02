@@ -107,7 +107,7 @@ HAMBURGUESA
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 30;
+  z-index: 30; 
 }
 
 .hamburger span {

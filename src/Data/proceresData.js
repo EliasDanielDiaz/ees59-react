@@ -4,7 +4,7 @@ export const proceres = [
     nombre: "Cornelio Saavedra",
     imagen: "/proceresImagenes/01CornelioSaavedra.jpg",
     texto: `
-<p><b>Cornelio Saavedra (1759–1829)</b></p>
+<p><b>(1759–1829)</b></p><br>
 
 <p>Cornelio Saavedra fue un <b>militar y político porteño</b>, figura central en los acontecimientos que llevaron a la Revolución de Mayo. Con amplia experiencia en las milicias criollas —donde se destacó durante las Invasiones Inglesas— se convirtió en un líder respetado por su prudencia, su capacidad organizativa y su influencia entre los cuerpos militares.</p>
 
@@ -18,7 +18,7 @@ export const proceres = [
     nombre: "Juan José Paso",
     imagen: "/proceresImagenes/02JuanJosePaso.jpg",
     texto: `
-<p><b>Juan José Paso (1758–1833)</b></p>
+<p><b>(1758–1833)</b></p><br>
 
 <p>Juan José Paso fue un <b>abogado, funcionario y político rioplatense</b> que desempeñó un papel fundamental en los debates y decisiones que llevaron a la formación del primer gobierno patrio. Su formación jurídica y su capacidad oratoria lo convirtieron en una figura influyente dentro del movimiento revolucionario.</p>
 
@@ -32,7 +32,7 @@ export const proceres = [
     nombre: "Domingo Matheu",
     imagen: "/proceresImagenes/03DomingoMatheu.jpg",
     texto: `
-<p><b>Domingo Matheu (1765–1831)</b></p>
+<p><b>(1765–1831)</b></p><br>
 
 <p>Domingo Matheu fue un <b>comerciante catalán</b> radicado en Buenos Aires que se convirtió en un firme defensor de la causa revolucionaria. Su experiencia en el comercio y su prestigio entre los sectores urbanos lo llevaron a ocupar un lugar destacado en la vida política del Río de la Plata.</p>
 
@@ -46,7 +46,7 @@ export const proceres = [
     nombre: "Juan Larrea",
     imagen: "/proceresImagenes/04JuanLarrea.jpg",
     texto: `
-<p><b>Juan Larrea (1782–1847)</b></p>
+<p><b>(1782–1847)</b></p><br>
 
 <p>Juan Larrea fue un <b>comerciante y político español</b> que se integró plenamente a la vida pública del Río de la Plata y apoyó decididamente la causa revolucionaria. Su visión económica y su capacidad administrativa lo convirtieron en una figura clave en los primeros gobiernos patrios.</p>
 
@@ -60,7 +60,7 @@ export const proceres = [
     nombre: "Juan José Castelli",
     imagen: "/proceresImagenes/05JuanJoseCastelli.jpg",
     texto: `
-<p><b>Juan José Castelli (1764–1812)</b></p>
+<p><b>(1764–1812)</b></p><br>
 
 <p>Juan José Castelli fue un <b>abogado, orador y revolucionario</b> conocido como el “Orador de la Revolución”. Su formación ilustrada y su pensamiento político avanzado lo convirtieron en una de las voces más influyentes del proceso emancipador.</p>
 
@@ -74,7 +74,7 @@ export const proceres = [
     nombre: "Mariano Moreno",
     imagen: "/proceresImagenes/06MarianoMoreno.jpg",
     texto: `
-<p><b>Mariano Moreno (1778–1811)</b></p>
+<p><b>(1778–1811)</b></p><br>
 
 <p>Mariano Moreno fue un <b>abogado, periodista y político revolucionario</b> cuya influencia intelectual marcó profundamente los primeros pasos de la independencia argentina. Su pensamiento ilustrado y su firme defensa de la libertad lo convirtieron en una de las figuras más destacadas de la Revolución de Mayo.</p>
 
@@ -88,7 +88,8 @@ export const proceres = [
     nombre: "Domingo French",
     imagen: "/proceresImagenes/07DomingoFrench.jpg",
     texto: `
-<p><b>Domingo French (1774–1825)</b></p>
+<p><b>(1774–1825)</b></p><br>
+
 <p>Domingo French fue un <b>militar y revolucionario porteño</b> que participó activamente en los acontecimientos que llevaron a la Revolución de Mayo. Su valentía y su compromiso con la causa patriota lo convirtieron en una figura destacada entre los grupos movilizados en 1810.</p>
 
 <p>Junto con Antonio Beruti, encabezó a los llamados <b>“chisperos”</b>, quienes distribuyeron cintas blancas y celestes durante los días previos al 25 de mayo para identificar a los partidarios de la revolución. También colaboró en la presión popular que impulsó la formación de la Primera Junta.</p>
@@ -101,7 +102,7 @@ export const proceres = [
     nombre: "Antonio Beruti",
     imagen: "/proceresImagenes/08AntonioBeruti.jpg",
     texto: `
-<p><b>Antonio Beruti (1772–1841)</b></p>
+<p><b>(1772–1841)</b></p><br>
 
 <p>Antonio Beruti fue un <b>militar y activista político</b> que desempeñó un papel fundamental en la movilización popular durante los días de la Revolución de Mayo. Su participación, junto a Domingo French, fue decisiva para sostener la presión social que permitió la formación del primer gobierno patrio.</p>
 
@@ -115,7 +116,7 @@ export const proceres = [
     nombre: "Manuel Belgrano",
     imagen: "/proceresImagenes/09ManuelBelgrano.jpg",
     texto: `
-<p><b>Manuel Belgrano (1770–1820)</b></p>
+<p><b>(1770–1820)</b></p><br>
 
 <p>Manuel Belgrano fue un <b>abogado, economista, militar y político</b> que se convirtió en una de las figuras más influyentes de la independencia argentina. Su pensamiento ilustrado y su compromiso con la educación y el progreso marcaron profundamente la historia del país.</p>
 
@@ -131,7 +132,7 @@ export const proceres = [
     nombre: "Guillermo Brown",
     imagen: "/proceresImagenes/10GuillermoBrown.jpg",
     texto: `
-<p><b>Guillermo Brown (1777–1857)</b></p>
+<p><b>(1777–1857)</b></p><br>
 
 <p>Guillermo Brown fue un marino de origen irlandés que se convirtió en el <b>padre de la Armada Argentina</b> y una de las figuras más decisivas en la consolidación del poder naval del país durante sus primeros años de vida independiente.</p>
 
@@ -147,7 +148,7 @@ export const proceres = [
     nombre: "Juana Azurduy Llanos de Padilla",
     imagen: "/proceresImagenes/11JuanaAzurduyLlanosDePadilla.jpg",
     texto: `
-<p><b>Juana Azurduy (1780–1862)</b></p>
+<p><b>(1780–1862)</b></p><br>
 
 <p>Juana Azurduy fue una <b>militar y heroína de la independencia sudamericana</b>, reconocida por su valentía y liderazgo en las luchas contra las fuerzas realistas. Su compromiso con la libertad la convirtió en un símbolo de coraje y resistencia.</p>
 
@@ -161,7 +162,7 @@ export const proceres = [
     nombre: "Martín Miguel de Güemes",
     imagen: "/proceresImagenes/12MartinMiguelDeGuemes.jpg",
     texto: `
-<p><b>Martín Miguel de Güemes (1785–1821)</b></p>
+<p><b>(1785–1821)</b></p><br>
 
 <p>Martín Miguel de Güemes fue un <b>militar salteño</b> que desempeñó un papel decisivo en la defensa del norte argentino durante la guerra de independencia. Su liderazgo en la guerra de guerrillas permitió contener repetidas invasiones realistas.</p>
 
@@ -175,7 +176,7 @@ export const proceres = [
     nombre: "José de San Martín",
     imagen: "/proceresImagenes/13JoseDeSanMartin.jpg",
     texto: `
-<p><b>José de San Martín (1778–1850)</b></p>
+<p><b>(1778–1850)</b></p><br>
 
 <p>José de San Martín fue un <b>militar y estratega</b> considerado uno de los libertadores de América. Su visión continental y su capacidad de liderazgo lo convirtieron en una figura central de la independencia de Argentina, Chile y Perú.</p>
 
@@ -189,7 +190,7 @@ export const proceres = [
     nombre: "Manuel Dorrego",
     imagen: "/proceresImagenes/14ManuelDorrego.jpg",
     texto: `
-<p><b>Manuel Dorrego (1787–1828)</b></p>
+<p><b>(1787–1828)</b></p><br>
 
 <p>Manuel Dorrego fue un <b>militar y político federal</b> que participó activamente en las guerras de independencia y en los primeros debates políticos del país. Su oratoria y su defensa del federalismo lo convirtieron en una figura influyente.</p>
 
@@ -203,7 +204,7 @@ export const proceres = [
     nombre: "Bernardino Rivadavia",
     imagen: "/proceresImagenes/15BernardinoRivadavia.jpg",
     texto: `
-<p><b>Bernardino Rivadavia (1780–1845)</b></p>
+<p><b>(1780–1845)</b></p><br>
 
 <p>Bernardino Rivadavia fue un <b>político y reformista</b> que impulsó importantes transformaciones institucionales y culturales en el Río de la Plata. Su visión modernizadora lo llevó a promover la educación, la ciencia y la organización del Estado.</p>
 
@@ -217,7 +218,7 @@ export const proceres = [
     nombre: "Juan Manuel de Rosas",
     imagen: "/proceresImagenes/16JuanManuelDeRosas.jpg",
     texto: `
-<p><b>Juan Manuel de Rosas (1793–1877)</b></p>
+<p><b>(1793–1877)</b></p><br>
 
 <p>Juan Manuel de Rosas fue un <b>político y estanciero</b> que gobernó Buenos Aires durante gran parte del siglo XIX. Su figura es una de las más debatidas de la historia argentina debido a su estilo de gobierno y su influencia política.</p>
 
@@ -231,7 +232,7 @@ export const proceres = [
     nombre: "Florencio Varela",
     imagen: "/proceresImagenes/17FlorencioVarela.jpg",
     texto: `
-<p><b>Florencio Varela (1807–1848)</b></p>
+<p><b>(1807–1848)</b></p><br>
 
 <p>Florencio Varela fue un <b>periodista, escritor y político</b> que se destacó por su oposición al gobierno de Rosas y por su defensa de las libertades civiles. Su labor intelectual influyó en el pensamiento político de su época.</p>
 
@@ -245,7 +246,7 @@ export const proceres = [
     nombre: "Juan Bautista Alberdi",
     imagen: "/proceresImagenes/18JuanBautistaAlberdi.jpg",
     texto: `
-<p><b>Juan Bautista Alberdi (1810–1884)</b></p>
+<p><b>(1810–1884)</b></p><br>
 
 <p>Juan Bautista Alberdi fue un <b>jurista, diplomático y pensador</b> cuya obra influyó decisivamente en la organización institucional de la Argentina. Su pensamiento liberal y su visión de país marcaron el rumbo de la Constitución de 1853.</p>
 
@@ -259,7 +260,7 @@ export const proceres = [
     nombre: "Bartolomé Mitre",
     imagen: "/proceresImagenes/19BartolomeMitre.jpg",
     texto: `
-<p><b>Bartolomé Mitre (1821–1906)</b></p>
+<p><b>(1821–1906)</b></p><br>
 
 <p>Bartolomé Mitre fue un <b>militar, político, historiador y escritor</b> que desempeñó un papel central en la organización nacional. Su liderazgo político y su obra intelectual dejaron una profunda huella en la historia argentina.</p>
 
@@ -273,7 +274,7 @@ export const proceres = [
     nombre: "Domingo Faustino Sarmiento",
     imagen: "/proceresImagenes/20DomingoFaustinoSarmiento.jpg",
     texto: `
-<p><b>Domingo Faustino Sarmiento (1811–1888)</b></p>
+<p><b>(1811–1888)</b></p><br>
 
 <p>Domingo Faustino Sarmiento fue un <b>educador, escritor, periodista y político</b> cuya obra transformó profundamente la educación y la cultura argentina. Su pensamiento progresista lo convirtió en uno de los grandes reformadores del país.</p>
 
