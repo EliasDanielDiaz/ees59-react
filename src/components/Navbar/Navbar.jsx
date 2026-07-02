@@ -3,29 +3,26 @@ import { useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/navbarImagenes/logo.png";
 
-
 export default function Navbar() {
-
   useEffect(() => {
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.querySelector(".nav-links");
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-  const toggleMenu = () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("open");
-  };
+    const toggleMenu = () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("open");
+    };
 
-  hamburger.addEventListener("click", toggleMenu);
+    hamburger.addEventListener("click", toggleMenu);
 
-  return () => {
-    hamburger.removeEventListener("click", toggleMenu);
-  };
-}, []);
+    return () => {
+      hamburger.removeEventListener("click", toggleMenu);
+    };
+  }, []);
 
   return (
     <nav className="navbar">
       <div className="nav-container">
-
         <div className="nav-logo">
           <Link to="/" className="logo-link">
             <img src={logo} alt="Logo E.E.S. N° 59" className="logo-img" />
@@ -44,14 +41,37 @@ export default function Navbar() {
         </button>
 
         <ul className="nav-links">
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/sobreNosotros">Sobre Nosotros</Link></li>
-          <li><Link to="/cursos">Cursos</Link></li>
-          <li><Link to="/canciones">Canciones</Link></li>
-          <li><Link to="/proceres">Próceres</Link></li>
-          <li><Link to="/contacto">Contacto</Link></li>
+          <li>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link to="/sobreNosotros" onClick={() => setMenuOpen(false)}>
+              Sobre Nosotros
+            </Link>
+          </li>
+          <li>
+            <Link to="/cursos" onClick={() => setMenuOpen(false)}>
+            Cursos
+            </Link>
+          </li>
+          <li>
+            <Link to="/canciones" onClick={() => setMenuOpen(false)}>
+            Canciones
+            </Link>
+          </li>
+          <li>
+            <Link to="/proceres" onClick={() => setMenuOpen(false)}>
+            Próceres
+            </Link>
+          </li>
+          <li>
+            <Link to="/contacto" onClick={() => setMenuOpen(false)}>
+            Contacto
+            </Link>
+          </li>
         </ul>
-
       </div>
     </nav>
   );

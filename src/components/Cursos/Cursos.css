@@ -444,6 +444,11 @@ RESPONSIVE
     font-size: 1.1rem;
     padding: 20px;
   }
+  
+  .cursos-grid-manana,
+  .cursos-grid-tarde {
+    gap: 10px 1px;
+  }
 
   .turno-titulo {
     font-size: 2rem;
@@ -451,13 +456,9 @@ RESPONSIVE
   }
 
   .turno-subtitulo {
+    text-align: center;
     font-size: 1.5rem;
-    margin: 10px 0 10px;
-  }
-
-  .cursos-grid-manana,
-  .cursos-grid-tarde {
-    gap: 10px 1px;
+    margin: 15px 0 15px;
   }
 
   .panel-cursos {
@@ -489,4 +490,36 @@ RESPONSIVE
   }
 }
 
+@media (max-width: 420px) {
+  .cursos-grid-manana,
+  .cursos-grid-tarde {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+  }
 
+  .turno-col-mañana,
+  .turno-col-tarde {
+    max-width: 360px;
+  }
+
+  .curso-boton {
+    font-size: 1.3rem;
+    padding: 40px 55px;
+  }
+  
+  .cursos-grid-manana,
+  .cursos-grid-tarde {
+    gap: 20px 1px;
+  }
+
+  .turno-titulo {
+    font-size: 2.2rem;
+    margin: 20px 0 10px;
+  }
+
+  .turno-subtitulo {
+    text-align: center;
+    font-size: 1.9rem;
+    margin: 25px 0 25px;
+  }
+}
