@@ -291,8 +291,6 @@ CARD DE PRÓCER
   }
 }
 
-
-
 @media (max-width: 550px) {
   .proceres-grid {
     grid-template-columns: 1fr;
